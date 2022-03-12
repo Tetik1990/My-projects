@@ -1,0 +1,63 @@
+﻿@model WebUI.Models.CartIndexViewModel
+
+
+@{
+    ViewBag.Title = "Корзина";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+
+<div class="banner-bottom" style="padding: 0.5em">
+
+    <div class="container">
+        <div class="bs-docs-example" style="margin-bottom: 10px">
+            <table id="cartTable" class="table table-sm">
+                <thead>
+                <tr>
+                    <th style="font-size: 10px">Количество</th>
+                    <th style="font-size: 10px">Наименование</th>
+                    <th style="font-size: 10px" class="text-right">Цена</th>
+                    <th style="font-size: 10px" class="text-right">Сумма</th>
+                    <th> </th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var line in Model.Cart.Lines)
+                {
+                    <tr>
+                        <td style="font-size: 10px" class="text-center">@line.Quantity</td>
+                        <td style="font-size: 10px" class="text-left">@line.Book.Name</td>
+                        <td style="font-size: 10px" class="text-right">@line.Book.Price.ToString("# грн")</td>
+                        <td style="font-size: 10px" class="text-right">@((line.Quantity * line.Book.Price).ToString("# грн"))</td>
+                        <td>
+                            @using (Html.BeginForm("RemoveFromCart", "Home"))
+                            {
+                                @Html.Hidden("BookId", line.Book.BookId)
+                                @Html.HiddenFor(x => x.ReturnUrl)
+                                <input class="btn btn-success " type="submit" style="font-size: 7px" value="Удалить" />
+                            }
+                        </td>
+                    </tr>
+                }
+                </tbody>
+                
+                <tfoot>
+                <tr>
+                    <td style="font-size: 10px" colspan="3" class="text-right">Итого:</td>
+                    <td style="font-size: 10px" class="text-right">
+                        @Model.Cart.ComputeTotalValue().ToString("# грн")
+                    </td>
+                </tr>
+                </tfoot>
+            </table>
+         
+        </div>
+    </div>
+    <div class="container">
+        <div class="text-center">
+            @Html.ActionLink("Продолжить покупки", "List", "Home", new { @class = "btn btn-success" })
+            @Html.ActionLink("Оформить заказ", "Checkout", null, new { @class = "btn btn-success" })
+        </div>
+    </div>
+</div>

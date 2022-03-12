@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Dental_clinic.Models.Service>
+
+@{
+    ViewBag.Title = "Price";
+}
+
+<div class="page">
+    <div class="intro" style=" background-image: url('../img/reviews__bg.jpg'); background-position: center; background-repeat: no-repeat;" id="intro">
+        <div class="container">
+            <label for="nav__link" style="font-size: 32px; margin: 50px;">Ціни та послуги, які ми надаємо</label>
+
+
+            <table class="table">
+               
+                <tr>
+
+                    <th>
+                        <label for="nav__link">Назва пслуги</label>
+                    </th>
+                    <th>
+                        <label for="nav__link">Ціна(грн.)</label>
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

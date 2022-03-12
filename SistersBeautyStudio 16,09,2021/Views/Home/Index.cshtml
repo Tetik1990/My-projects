@@ -1,0 +1,528 @@
+﻿@model Domain.Entities.GuestResponse
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Beauty Salon a Beauty Category Bootstrap Responsive website Template | Home :: w3layouts</title>
+    <!-- Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Sister’s Family Beauty Studio, салон красоты, студия красоты, шугаринг, наращевание ресниц,
+           наращевание бровей, маникюр, педикюр, чистка лица, массаж лица, перманентный макияж, ламинирование бровей, ламинирование ресниц,
+            курсы макияжа, курсы перманентного макияжа, курсы по маникюру, курсы ламинирование бровей, курсы ламинирование ресниц, курсы шугаринга " />
+    <script type="application/x-javascript">
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <!-- //Meta Tags -->
+    <!-- Style Sheets -->
+    <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <!--// Bootstrap-CSS -->
+    <link href="~/css/font-awesome.css" rel="stylesheet">
+    <!--// Font-Awesome-CSS -->
+    <link rel="stylesheet" href="~/css/owl.carousel.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="~/css/flexslider.css" type="text/css" media="screen" property="" />
+    <!--// Owl-Carousel-CSS -->
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- //Style Sheets -->
+    <!-- web-fonts -->
+    <link href="~/fonts.googleapis.com/css?family=Khula:300,400,600,700,800" rel="stylesheet">
+    <link href="~/fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,400,400i,500,500i,600,600i,700,700i,800" rel="stylesheet">
+    <!--// web-fonts -->
+</head>
+
+<body>
+    <!-- banner -->
+    <div class="banner jarallax" id="home">
+        <img class="jarallax-img" src="~/images/345.jpg" alt="">
+        <header>
+            <div class="container">
+                <div class="header-bottom-agileits">
+                    <div class="w3-logo" >
+                        <img src="~/images/logo.png" height="175" />
+                    </div>
+                    <div class="nav-contact-w3ls">
+                        <div style="        display: flex;
+
+        justify-content: space-around;
+        align-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+">
+                            <p><a href="tel:+380636888072" style="color: black">+38(063)6888072</a></p>
+
+                            <p style="margin-left: 25px; color: black" class="para-y"><a href="mailto:monastirska15032012@gmail.com" style="color: black">Email</a><span class="fa fa-envelope-o" style="color: black" aria-hidden="true"></span></p>
+                        </div>
+                        <div style="        display: flex;
+
+        justify-content: space-around;
+        align-content: flex-end;
+        flex-direction: column;
+        align-items: center;
+">
+                            <a style="color: black" href="@Url.Action("CartIndex", "Home")"><i class="fa-cart-arrow-down fa" style="color: black"></i></a>
+                            <p class="para-y" style="color: black; margin-top: 0px"> @Html.Action("Summary", "Home")</p>
+                        </div>
+
+
+
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- navigation -->
+        <div class="nav-bg">
+            <div class="container">
+                <nav class="navbar navbar-default shift">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                                aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+
+                            <li><a>@Html.ActionLink("Главная", "Index", "Home", new { @class = "nav__link" })</a></li>
+                            <li><a>@Html.ActionLink("Магазин", "List", "Home", new { @class = "nav__link" })</a></li>
+                            <li><a>@Html.ActionLink("Школа", "School", "Home", new { @class = "nav__link" })</a></li>
+                            <li><a>@Html.ActionLink("Услуги", "Services", "Home", new { @class = "nav__link" })</a></li>
+                            <li><a>@Html.ActionLink("Прайс", "PriceList", "Home", new { @class = "nav__link" })</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle effect-3" data-toggle="dropdown">Информация<b class="caret"></b></a>
+                                <ul class="dropdown-menu agile_short_dropdown">
+                                    <li><a>@Html.ActionLink("O нас", "About", "Home", new { @class = "nav__link" })</a></li>
+                                    <li><a>@Html.ActionLink("Галерея", "Galery", "Home", new { @class = "nav__link" })</a></li>
+                                    <li><a>@Html.ActionLink("Контакты", "SendingData", "Home", new { @class = "nav__link" })</a></li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+
+                    </div>
+                    <!-- /.navbar-collapse -->
+
+                </nav>
+            </div>
+        </div>
+        <!-- //navigation -->
+        <div class="container">
+            <!-- header -->
+            <!-- //header -->
+            <div class="agileits_w3layouts_banner_info">
+                <section class="slider">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <div class="banner-text-w3-agileits">
+                                    <h5>Ты можешь стать лучшей версией себя, воспользовавшись услугами салона</h5>
+                                    <h2>  Sister’s Family Beauty Studio </h2>
+
+                                    <div class="botton">
+                                        @Html.ActionLink("Наши услуги", "Services", "Home", new { @class = "nav__link" })
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-text-w3-agileits">
+
+                                    <h2>  Sister’s Family Beauty Studio </h2>
+                                    <h5>предлагает большой ассортимент товаров для красоты </h5>
+                                    <div class="botton">
+                                        @Html.ActionLink("В магазин", "List", "Home", new { @class = "nav__link" })
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-text-w3-agileits">
+                                    <h5>А так же в </h5>
+                                    <h2>  Sister’s Family Beauty Studio </h2>
+                                    <h5>есть курсы обучения, пройдя которые, Вы сами станете мастером в beauty-индустрии.</h5>
+                                    <div class="botton">
+                                        @Html.ActionLink("Подробнее", "School", "Home", new { @class = "nav__link" })
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- //banner -->
+    <div class="about">
+        <div class="container">
+            <div class="wthree_head_section animate__animated animate__zoomIn">
+                <h3 class="w3l_header">Почему клиенты вибирают именно нас</h3>
+                <p>
+                    Возможность расслабиться и доверить себя в руки мастера, которому доверяешь - это важно . Мы даем нашим клиентам такую возможность.
+
+                </p>
+            </div>
+            <div class="ab-agile">
+                <div class="col-md-6 aboutleft animate__animated animate__fadeInLeft">
+                    <p style="font-weight: bold; font-style: italic"><i class="fa fa-diamond" style="color: #b1955d" aria-hidden="true" ></i> Безопасность прежде всего</p>
+                    <p>
+                        В нашей студии мы используем материалы только премиального уровня по привлекательным ценам, а также инструменты,
+                        которые проходят 4 этапа стерилизации
+                    </p>
+
+                    <p style="font-weight: bold; font-style: italic"><i class="fa fa-diamond" style="color: #b1955d" aria-hidden="true"></i> Лучшие мастера</p>
+                    <p>
+                        Наши мастера имеют большой практический опыт в своем направлении. Они регулярно проходят обучение и повышение
+                        квалификации в самых современных и лучших школах страны.
+                    </p>
+
+                    <p style="font-weight: bold; font-style: italic"><i class="fa fa-diamond" style="color: #b1955d" aria-hidden="true"></i> Комфорт</p>
+                    <p>
+                        Мы всегда стараемся сделать уютную и дружелюбную обстановку , чтобы всем нашим гостям было комфортно находиться в Sister’s
+                        Family Beauty Studio
+                    </p>
+                    <p style="font-weight: bold; font-style: italic"><i class="fa fa-diamond" style="color: #b1955d" aria-hidden="true"></i> Каждый наш клиент – самый желанный и любимый.</p>
+                    <p>Мы регулярно балуем наших постоянных клиентов новинками, специальными предложениями, подарками и интересными мероприятиями.</p>
+                    <p style="font-weight: bold; font-style: italic"><i class="fa fa-diamond" style="color: #b1955d" aria-hidden="true"></i> Индивидуальный подход и приятные цены</p>
+                    <p>
+                        Для нас очень важно найти индивидуальный подход  и удивить приятными ценами , акциями и скидками каждого клиента.
+                    </p>
+                    <p style="font-weight: bold; font-style: italic"><i class="fa fa-diamond" style="color: #b1955d" aria-hidden="true"></i> Удобное месторасположение</p>
+                    <p>
+                        Студия обладает удобным месторасположением - в жилом комплексе премиум-класса ЖК Комфорт Таун, так что найти нас и добраться очень легко.
+                    </p>
+
+
+
+                </div>
+                <div class="col-md-6 aboutright animate__animated animate__fadeInRight">
+                    <img src="~/images/home image.jpg" class="img-responsive" alt="" />
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!-- counter -->
+    <div class="services-bottom jarallax">
+        <img class="jarallax-img" src="~/images/11.jpg" alt="">
+        <div class="banner-dott1">
+            <div class="container">
+                <div class="wthree_head_section">
+                    <h3 class="w3l_header two">Наша статистика</h3>
+                </div>
+                <div class="wthree-agile-counter">
+                    <div class="col-md-3 w3_agile_stats_grid-top" style="align-items: center">
+                        <div class="w3_agile_stats_grid">
+                            <div class="agile_count_grid_left">
+                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                            </div>
+                            <div class="agile_count_grid_right">
+                                <p class="counter">76</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                            <h4>Оказываемых услуг</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_agile_stats_grid-top" style="align-items: center">
+                        <div class="w3_agile_stats_grid">
+                            <div class="agile_count_grid_left">
+                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            </div>
+                            <div class="agile_count_grid_right">
+                                <p class="counter">100000</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                            <h4>Довольных клиентов</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_agile_stats_grid-top" style="align-items: center">
+                        <div class="w3_agile_stats_grid">
+                            <div class="agile_count_grid_left">
+                                <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+                            </div>
+                            <div class="agile_count_grid_right">
+                                <p class="counter">57000</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                            <h4>Успешных процедур</h4>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_agile_stats_grid-top" style="align-items: center">
+                        <div class="w3_agile_stats_grid">
+                            <div class="agile_count_grid_left">
+                                <span class="fa fa-trophy" aria-hidden="true"></span>
+                            </div>
+                            <div class="agile_count_grid_right">
+                                <p class="counter">235 </p>
+                            </div>
+                            <div class="clearfix"> </div>
+                            <h4>Успешных выпускников</h4>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //counter -->
+    <!-- Clients -->
+    <div class="about" id="clients">
+        <div class="container">
+            <!-- Owl-Carousel -->
+            <div class="wthree_head_section">
+                <h3 class="w3l_header">Ваши отзывы - это лучшая награда</h3>
+
+            </div>
+            <div id="owl-demo" class="owl-carousel text-center clients-right">
+                <div class="item g1">
+
+                    <div class="clearfix"></div>
+                    <p class="para-w3-agile">
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Здравствуйте) Карина, хочу сказать огромное спасибо за чистку, проснулась с абсолютно чистой кожей, ровным тоном лица, осталось только незколько покраснений,
+                        где были воспаленные прищики. В следующий раз очень хочу попробовать атравматическую вместе с пилингом и массажем, до скорой встречи.
+                        <span class="fa fa-quote-right" aria-hidden="true"></span>
+                    </p>
+                </div>
+                <div class="item g1">
+
+                   
+                    <p class="para-w3-agile">
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Кстати, кожа сейчас очень бархатная, следов от чистки почти нет, жду вау результата, вижу, что уже
+                        в разы лучше, а это второй день))) спасибо вам, очень все качественно и профессионально)))
+                        <span class="fa fa-quote-right" aria-hidden="true"></span>
+                    </p>
+                </div>
+
+                <div class="item g1">
+
+                   
+                    <p class="para-w3-agile">
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Дуже вдячна за прекрасний манікюр та педікюр) дякую, що спасла ногтики для такого важливого дня)))
+                        <span class="fa fa-quote-right" aria-hidden="true"></span>
+                    </p>
+                </div>
+                <div class="item g1">
+
+                 
+                    <p class="para-w3-agile">
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        За рєснічки дякую ще раз))) На бровки і рєснічки тепер тільки до тебе!
+                        <span class="fa fa-quote-right" aria-hidden="true"></span>
+                    </p>
+                </div>
+                <div class="item g1">
+
+                    <div class="clearfix"></div>
+                    <p class="para-w3-agile">
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Дякую вам за якісну роботу! Нігті і брови дуже подобаються! Ви - мій майстер!!!
+                        <span class="fa fa-quote-right" aria-hidden="true"></span>
+                    </p>
+                </div>
+
+                <div class="item g1">
+
+                    <div class="clearfix"></div>
+                    <p class="para-w3-agile">
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Мне, кстати, уходка вся нравится. Еще прошло мало времени, но мне все заходит ))) спасибо!
+                        <span class="fa fa-quote-right" aria-hidden="true"></span>
+                    </p>
+                </div>
+                <div class="item g1">
+
+                    <div class="clearfix"></div>
+                    <p class="para-w3-agile">
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Очень понравилось на процедуре (не смотря на боль). Спасибо большое за сервис! Вернусь обязательно
+                        <span class="fa fa-quote-right" aria-hidden="true"></span>
+                    </p>
+                </div>
+                <div class="item g1">
+
+                    <div class="clearfix"></div>
+                    <p class="para-w3-agile">
+                        <span class="fa fa-quote-left" aria-hidden="true"></span>
+                        Кариночка, Вы умничка))) Хорошо почистили и поры хорошо закрились, я довольна , спасибо!
+                        <span class="fa fa-quote-right" aria-hidden="true"></span>
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+        <!--// Owl-Carousel -->
+    </div>
+  
+    <!--// Clients -->
+    <!-- footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="f-bg-w3l">
+                <div class="col-md-4 w3layouts_footer_grid" style="align-items: center">
+                    <h2>Контактная информация</h2>
+                    <ul class="con_inner_text">
+                        <li>
+                            <span class="fa fa-map-marker" aria-hidden="true"></span>
+                            ЖК Комфорт Таун,
+                            Пр-т Соборности 17,<br />
+                            дом 2, подьезд 19, 1 этаж,
+                            домофон - 1334
+                        </li>
+                        <li><span class="fa fa-envelope-o" aria-hidden="true"></span> <a href="mailto:monastirska15032012@gmail.com">monastirska15032012@gmail.com</a></li>
+                        <li><span class="fa fa-phone" aria-hidden="true"></span> <a href="tel:+380636888072" ">+38(063)6888072</a></li>
+                    </ul>
+
+                    <ul class="social_agileinfo">
+                        <li><a href="https://www.instagram.com/sisters_____beauty/?igshid=8b3qflh1xv17" class="w3_instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/kristina_monastirska/?utm_medium=copy_link" class="w3_instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.instagram.com/karina_klymenko_beauty/?utm_medium=copy_link" class="w3_instagram" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/kristina.monastirska" class="w3_facebook"><i class="fa fa-facebook" target="_blank"></i></a></li>
+                        <li><a href="https://www.facebook.com/karyna.klymenko" class="w3_facebook"><i class="fa fa-facebook" target="_blank"></i></a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-4 w3layouts_footer_grid" tyle="align-items: center">
+                    <div class="wthree_head_section">
+                        
+                        <h3>
+                            Форма обратной связи
+                        </h3>
+                        <div class="battonhere">
+                            <a> @Html.ActionLink("Заполнить", "SendingData", "Home", new { @class = "btn btn-success" })</a>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="col-md-4 w3layouts_footer_grid">
+                    <h3>Галерея</h3>
+                    <ul class="con_inner_text midimg">
+                        <li><a href="@Url.Action("Galery", "Home")"><img src="~/images/cosmetologia6.jpg" alt="" class="img-responsive" /></a></li>
+                        <li><a href="@Url.Action("Galery", "Home")"><img src="~/images/massag2.jpg" alt="" class="img-responsive" /></a></li>
+                        <li><a href="@Url.Action("Galery", "Home")"><img src="~/images/massag1.jpg" alt="" class="img-responsive" /></a></li>
+                        <li><a href="@Url.Action("Galery", "Home")"><img src="~/images/nail (4).jpg" alt="" class="img-responsive" /></a></li>
+                        <li><a href="@Url.Action("Galery", "Home")"><img src="~/images/cosmetologia7.jpg" alt="" class="img-responsive" /></a></li>
+                        <li><a href="@Url.Action("Galery", "Home")"><img src="~/images/mezhresnichnoe prostranstvo4.jpg" alt="" class="img-responsive" /></a></li>
+                        <li><a href="@Url.Action("Galery", "Home")"><img src="~/images/oformlenie brovey (3).jpg" alt="" class="img-responsive" /></a></li>
+                        <li><a href="@Url.Action("Galery", "Home")"><img src="~/images/nail (3).jpg" alt="" class="img-responsive" /></a></li>
+                        <li><a href="@Url.Action("Galery", "Home")"><img src="~/images/cosmetologia8.jpg" alt="" class="img-responsive" /></a></li>
+
+                    </ul>
+
+                </div>
+                
+
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <p class="copyright">© 2017 Beauty Salon. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank" style="color: gray">w3layouts</a></p>
+    </div>
+    <!-- //footer -->
+
+    <a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+    <!-- //smooth scrolling -->
+    <script type='text/javascript' src='~/js/jquery-2.2.3.min.js'></script>
+    <!-- start-smoth-scrolling -->
+
+
+    <script src="~/js/jarallax.js"></script>
+
+    <script type="text/javascript">
+        /* init Jarallax */
+        $('.jarallax').jarallax({
+            speed: 0.5,
+            imgWidth: 1366,
+            imgHeight: 768
+        })
+    </script>
+    <!-- flexSlider -->
+    <script defer src="~/js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+    <!-- //flexSlider -->
+    <!-- Owl-Carousel-JavaScript -->
+    <script src="~/js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+                items: 2,
+                lazyLoad: true,
+                autoPlay: false,
+                pagination: true,
+            });
+        });
+    </script>
+    <!-- //Owl-Carousel-JavaScript -->
+    <script type="text/javascript" src="~/js/move-top.js"></script>
+    <script type="text/javascript" src="~/js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear'
+                };
+            */
+
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
+
+        });
+    </script>
+    <!-- //here ends scrolling icon -->
+    <!-- stats -->
+    <script src="~/js/jquery.waypoints.min.js"></script>
+    <script src="~/js/jquery.countup.js"></script>
+    <script>
+        $('.counter').countUp();
+    </script>
+    <!-- //stats -->
+    <!--js for bootstrap working-->
+    <script src="~/js/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+</body>
+
+</html>

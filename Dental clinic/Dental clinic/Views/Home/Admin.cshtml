@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Dental_clinic.Models.Service>
+
+@{
+    ViewBag.Title = "Admin";
+}
+<div class="page">
+    <div class="intro" id="intro">
+        <div class="container">
+            <label for="nav__link" style="font-size: 32px; margin: 50px;">Адмін сторінка</label>
+           
+
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.ActionLink("Створити процедуру", "Create")
+                    </th>
+                </tr>
+                <tr>
+
+                    <th>
+                        <label for="nav__link">Назва процедури</label>
+                    </th>
+                    <th>
+                        <label for="nav__link">Ціна(грн.)</label>
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+
+                            @Html.ActionLink("Редагувати", "Edit", new {id = item.Id}) |
+                            @Html.ActionLink("Видалити", "Delete", new {id = item.Id})
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

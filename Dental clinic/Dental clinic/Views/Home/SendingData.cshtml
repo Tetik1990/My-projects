@@ -1,0 +1,43 @@
+﻿@model Dental_clinic.Models.GuestResponse
+
+@{
+    ViewBag.Title = "Форма для заповнення";
+}
+<div class="page">
+    <div class="intro" id="intro">
+    <div class="container">
+
+        <div class="col-lg-6 form-inner-cont">
+
+            <div class="form-group-lg">
+                @using (Html.BeginForm())
+                {
+                    @Html.ValidationSummary()
+                    <div class="form-input">
+                        <label for="nav__link">@ViewBag.Greeting</label>
+                      
+                    </div>
+                    <div class="form-input">
+                        <label for="nav__link">Ваше прізвище та ім'я</label>
+                        @Html.TextBoxFor(x => x.Name, new {@class = "form-control"})
+                    </div>
+                    <div class="form-input">
+                        <label>Ваш email:</label>
+                        @Html.TextBoxFor(x => x.Email, new {@class = "form-control"})
+                    </div>
+                    <div class="form-input">
+                        <label>Ваш телефон:</label>
+                        @Html.TextBoxFor(x => x.Phone, new {@class = "form-control"})
+                    </div>
+
+                    <div class="text-center">
+                        <input type="submit" style="background-color: transparent" value="Відправити" class="btn1"/>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+   

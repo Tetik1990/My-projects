@@ -1,0 +1,127 @@
+﻿@model IEnumerable<WebUI.Models.Prices>
+
+@{
+    ViewBag.Title = "PriceList";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="banner-bottom">
+    <div class="container">
+        <div class="wthree_head_section animate__animated animate__zoomIn">
+            
+            <h3 style="text-transform: uppercase" class="w3l_header">Прайс</h3>
+            <p>
+                Стоимость услуг (грн)
+            </p>
+        </div>
+
+        <div class="bs-docs-example" style="margin-bottom: 10px">
+            <div class="col-lg-10 col-md-8 col-sm-10 col-xs-12 animate__animated animate__fadeInRight">
+
+                <div class="w3l_header_price">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Чистка лица</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 300px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Терапии</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 600px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Массаж лица</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 901px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Перманентный макияж</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 1250px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Маникюр</p>
+                </div>
+
+                <div class="w3l_header_price" style="margin-top: 1950px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Шугаринг лица (женский)</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 2250px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Шугаринг рук (женский)</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 2500px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Шугаринг бикини (женский)</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 2700px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Шугаринг живота (женский)</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 3000px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Шугаринг ног (женский)</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 3300px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Шугаринг лица (мужской)</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 3600px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Шугаринг рук (мужской)</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 3850px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Шугаринг бикини (мужской)</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 4100px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Шугаринг живота (мужской)</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 4400px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Шугаринг ног (мужской)</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 4650px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px"> Пилинги</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 5100px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Брови и ресницы</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 5550px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Загар</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 5650px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Волосы</p>
+                </div>
+                <div class="w3l_header_price" style="margin-top: 5750px">
+                    <img style="max-width: 100%; min-height: 20px" src="~/images/gradient.jpg" />
+                    <p style="font-size: 20px; margin: -35px">Новинки (New)</p>
+                </div>
+
+                <table class="table table-hover animate__animated animate__fadeInLeft">
+
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Price)
+                            </td>
+
+                        </tr>
+
+                    }
+
+                </table>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

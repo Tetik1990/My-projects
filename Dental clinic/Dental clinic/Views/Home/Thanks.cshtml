@@ -1,0 +1,40 @@
+﻿@model Dental_clinic.Models.GuestResponse
+
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<div class="page">
+    <div class="intro" id="intro">
+        <div class="container">
+            @{
+                try
+                {
+                    WebMail.SmtpServer = "smtp.gmail.com";
+                    WebMail.SmtpPort = 587;
+                    WebMail.EnableSsl = true;
+                    WebMail.UserName = "2662200@gmail.com";
+                    WebMail.Password = "mvlaplzbwppnlcjh";
+                    WebMail.From = "2662200@gmail.com";
+
+                    WebMail.Send("2662200@gmail.com", "Запис на прийом",
+                        "Ім'я клієнта: " + Model.Name + "." 
+                        +  "Номер телефона клієнта: " + Model.Phone + "."
+                        +  "Електронна адреса: " + Model.Email +".");
+
+                }
+                catch (Exception)
+                {
+                    @:<b>Виникла помилка.</b>
+                }
+            }
+            <div class="text-center">
+                <label  for="nav__link">Дякуємо, @Model.Name, Ваша заявка прийнята.</label>
+                <label for="nav__link">Ми зв'яжемося з Вами найближчим часом для запису на прийом.</label>
+                  
+                </div>
+            </div>
+           
+        </div>
+    </div>
+

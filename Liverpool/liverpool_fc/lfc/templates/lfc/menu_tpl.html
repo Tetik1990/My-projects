@@ -1,0 +1,13 @@
+<div class="{{ menu_class }} ">
+    <ul>
+
+
+        {% for item in categories %}
+         <li><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+        <li><a href="{% url 'team' %}">Команда</a></li>
+
+
+    </ul>
+</div>
+

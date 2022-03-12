@@ -1,0 +1,47 @@
+﻿@model Domain.Entities.ShippingDetails
+
+
+@{
+
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<section>
+    <div class="container">
+        <div class="col-md-8 contact-w3ls">
+            
+
+            <p>Пожалуйста, введите Ваши контактные данные.</p>
+
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary()
+                ;
+
+                <div class="form-group " style="margin-top: 15px">
+                    <label>Ваше имя:</label>
+                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                </div>
+
+
+                foreach (var property in ViewData.ModelMetadata.Properties)
+                {
+                    if (property.PropertyName != "Name" && property.PropertyName != "GiftWrap")
+                    {
+                        <div class="form-group">
+                            <label>
+                                @(property.DisplayName ?? property.PropertyName)
+                            </label>
+                            @Html.TextBox(property.PropertyName, null, new { @class = "form-control" })
+                        </div>
+                    }
+                }
+
+
+                <div class="text-center">
+                    <input class="btn btn-linkkk " type="submit" value="Заказать" />
+                </div>
+            }
+        </div>
+    </div>
+    
+</section>

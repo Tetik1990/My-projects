@@ -1,0 +1,92 @@
+﻿
+
+@model Domain.Entities.GuestResponse
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<!-- contact -->
+<div class="contact">
+    <div class="container">
+        <div class="wthree_head_section animate__animated animate__zoomIn">
+            <h3 class="w3l_header " style="margin-top: 70px">Контакты</h3>
+            <p >
+                Если Вы заполните эту форму, мы свяжемся с Вами в ближайшее время для записи на процедуру или по другим вопросам
+            </p>
+        </div>
+        <div class="gal-btm">
+            <div class="map-home">
+                <div class="col-md-5 col-sm-5 drop-pad sign-gd-two animate__animated animate__fadeInLeftBig " style="align-items: center">
+                    <h3 class="text-center">Наш адрес</h3>
+                    <ul >
+                        <li>
+                            <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+                            ЖК Комфорт Таун, <br /> Пр-т Соборности 17, <br /> дом 2, подьезд 19, 1 этаж,  <br />домофон - 1334
+                        </li>
+                        <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i> <a href="tel:+380636888072">+38(063)6888072</a></li>
+                        <li><i class="glyphicon glyphicon-earphone" aria-hidden="true"></i> <a href="tel:+380937935919">+38(093)7935919</a></li>
+                        <li><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><a href="mailto:monastirska15032012@gmail.com">monastirska15032012@gmail.com</a></li>
+                    </ul>
+                    <p class="wthree_head_section" style="margin-bottom: 0">
+                        Звоните, если трудно найти. Мы Вас сориентируем!
+                    </p>
+                    <h3 class="connect">Мы в соцсетях</h3>
+                    <ul class="top-links">
+                        <li><a href="https://www.instagram.com/sisters_____beauty/?igshid=8b3qflh1xv17"><i class="fa fa-instagram" target="_blank"></i></a></li>
+                        <li><a href="https://www.instagram.com/kristina_monastirska/?utm_medium=copy_link"><i class="fa fa-instagram" target="_blank"></i></a></li>
+                        <li><a href="https://www.instagram.com/karina_klymenko_beauty/?utm_medium=copy_link"><i class="fa fa-instagram" target="_blank"></i></a></li>
+                        <li><a href="https://www.facebook.com/kristina.monastirska"><i class="fa fa-facebook" target="_blank"></i></a></li>
+                        <li><a href="https://www.facebook.com/karyna.klymenko"><i class="fa fa-facebook" target="_blank"></i></a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-7 col-sm-7 contact-w3ls animate__animated animate__fadeInRightBig " style="align-items: center">
+                    @using (Html.BeginForm())
+                    {
+                        <form action="#" method="post">
+                            <div class="col-md-5 col-sm-5  contact-left agileits-w3layouts">
+
+                                <div class="f-control">
+                                    <label class="header">имя <span>:</span></label>
+                                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                                </div>
+
+                                <div class="f-control">
+                                    <label class="header">Email <span>:</span></label>
+                                    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                                </div>
+
+                                <div class="f-control">
+                                    <label class="header">телефон <span>:</span></label>
+                                    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+                                </div>
+                                <!-- <input type="text" class="email" name="Last Name" placeholder="Last Name" required=""> -->
+                            </div>
+                            <div class="col-md-7 col-sm-7 contact-right agileits-w3layouts">
+
+                                <label class="header">Сообщение<span>:</span></label>
+                                @Html.TextAreaFor(x => x.Massage, new { @class = "form-control" })
+
+
+                            </div>
+                            <div class="clearfix"> </div>
+                            <input type="submit" value="Отправить">
+
+                        </form>
+                    }
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        
+            
+            
+       
+    </div>
+</div>
+<!-- //contact -->
+<!-- map -->
+<div class="frame">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.3359938963304!2d30.613996815730786!3d50.43484197947323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c59a1fe29e65%3A0x6bd178521af85f95!2sSisters%20Studio!5e0!3m2!1sru!2sua!4v1628684760286!5m2!1sru!2sua" allowfullscreen="" loading="lazy"></iframe>" 
+</div>
+<!-- //map -->

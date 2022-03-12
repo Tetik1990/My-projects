@@ -1,0 +1,50 @@
+﻿@model WebUI.Models.Prices
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="page">
+    <div class="intro" id="intro">
+        <div class="container">
+
+            <h3><label for="nav__link">Ви впевнені, що хочете видалити процедуру?</label></h3>
+            <div>
+                
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        <label for="nav__link">Назва процедури</label>
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
+
+                    <dt>
+                        <label for="nav__link">Ціна(грн.)</label>
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Price)
+                    </dd>
+
+                </dl>
+
+                @using (Html.BeginForm())
+                {
+                   
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Удалить" class="btn1" style="background-color: transparent; margin: 30px;"/>
+                      
+                    </div>
+
+                    <div>
+                        @Html.ActionLink("Назад", "Price")
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

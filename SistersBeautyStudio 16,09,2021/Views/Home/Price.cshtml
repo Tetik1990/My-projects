@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebUI.Models.Prices>
+
+@{
+    ViewBag.Title = "Price";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="banner-bottom">
+    <div class="container">
+
+        
+           
+        <div>
+            @Html.ActionLink("Админ страница", "AdminIndex", null, new { @class = "btn btn-success" })
+            @Html.ActionLink("Создать новую", "Create", null, new { @class = "btn btn-success" })
+        </div>
+        
+        <div class="bs-docs-example">
+            <table class="table table-hover">
+
+                <tr>
+                    <th>
+                        <h3>Название процедуры </h3>
+                    </th>
+                    <th>
+                        <h3>Цена (грн) </h3>
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Price)
+                        </td>
+                        <td>
+                             @Html.ActionLink("Изменить", "Edit", new { id = item.Id }, new { @class = "btn btn-success" }) |
+
+                             @Html.ActionLink("Удалить", "Delete", new { id = item.Id}, new { @class = "btn btn-success" })
+                        </td>
+            </tr>
+            }
+
+            </table>
+        </div>
+    </div>
+</div>

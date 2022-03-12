@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load sidebar %}
+{% block title %} {{ post.title }} :: {{block.super}} {% endblock %}
+
+{% block content %}
+<section class="single-blog-area">
+            <div class="container">
+                <div class="row">
+                   <div class="col-md-12">
+                    <div class="border-top">
+                        <div class="col-md-8 col-lg-8 col-sm-8">
+                        <div class="blog-area">
+                            <div class="blog-area-part">
+                                {% if player.photo %}
+                                    <img src="{{player.photo.url}}" alt="{{ player.title }}">
+                                    {% else %}
+                                    <img src="https://picsum.photos/id/1060/300/201/?blur=2" alt="{{ player.title }}">
+                                    {% endif %}
+                                <h2>{{ player.title }}</h2>
+                                <div class="single_content">
+                                  {{ player.content|safe }}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="newsletter">
+                            <h2 class="sidebar-title">Поиск статьи</h2>
+                            <form action="{% url 'search' %}" method="get">
+                                <input type="text" name="s" placeholder="Поиск...">
+                                <input type="submit" value="Поиск">
+                            </form>
+                        </div>
+
+                        {% get_popular 5 %}
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                       {% get_tags %}
+
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

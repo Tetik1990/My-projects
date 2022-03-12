@@ -1,0 +1,60 @@
+﻿
+
+
+@using WebUI.Models
+@model BooksListViewModel
+
+
+@{
+    ViewBag.Title = "Магазин";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<div class="container">
+
+    <div class="card-header" style="align-items: center" role="tab" id="heading1">
+        <h4 class="mb-0 text-center" style="margin-top: 75px">
+            <a style="color: black" data-toggle="collapse" href="#collapse1" aria-expanded="false" aria-controls="collapse1" class="collapsed ">
+                Категории
+            </a>
+
+        </h4>
+    </div>
+
+    <div id="collapse1" class="collapse" role="tabpanel" aria-labelledby="heading1" style="">
+        <div class="card-body text-left">
+            <div id="genres" class=" animate__animated animate__zoomIn">
+                @Html.Action("Menu", "Nav")
+            </div>
+        </div>
+    </div>
+
+</div>
+<section class="team">
+
+
+
+    <div class="container">
+
+        @foreach (var book in Model.Books)
+        {
+            @Html.Partial("_BookSummary", book)
+
+        }
+
+
+
+
+    </div>
+</section>
+
+
+
+<div class="container text-center">
+    <div class="btn-group " style=" margin-bottom: 20px">
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, genre = Model.CurrentGenre }))
+    </div>
+</div>
+
+
+

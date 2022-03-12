@@ -1,0 +1,56 @@
+﻿
+
+@model Domain.Entities.Book
+
+
+
+@if (Model.ImageData != null)
+{
+    <div class="team-grid-top">
+        <div class="col-md-3 team1">
+            <div class="inner-team1 ">
+                
+                <div class="img-thumbnail">
+                    <img src="@Url.Action("GetImage", "Home",
+                                  new {Model.BookId})" />
+                </div>
+                <div class="card-header text-center">
+                    <h4 style="font-size: 15px;">@Model.Name</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h4 style="margin: 10px 100px 0;">@Model.Price.ToString("# грн") </h4>
+                </div>
+                <div class="team-social">
+                    @using (Html.BeginForm("AddToCart", "Home"))
+                    {
+
+                        @Html.HiddenFor(x => x.BookId)
+                        @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                    <input type="submit" class="btn btn-success" value="Добавить в корзину"  />
+
+                    }
+
+                    @using (Html.BeginForm("ProductDetails", "Home"))
+                    {
+
+                        @Html.HiddenFor(x => x.BookId)
+                        @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                        <input type="submit" class="btn btn-success" value="Подробнее" />
+
+                    }
+                </div>
+               
+            </div>
+        
+        </div>
+    </div>
+ 
+}
+
+
+
+
+
+
+
+
